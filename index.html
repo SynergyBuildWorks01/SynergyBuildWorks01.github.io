@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Building Maintenance & Renovation Services</h1>
+            <nav>
+                <ul>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="services" class="section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Plumbing</h3>
+                    <p>We provide comprehensive plumbing services, including:</p>
+                    <ul>
+                        <li>Pipe repair and replacement</li>
+                        <li>Leak detection and fixing</li>
+                        <li>Water heater installation</li>
+                        <li>Drain cleaning</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Carpentry</h3>
+                    <p>Our carpentry services include:</p>
+                    <ul>
+                        <li>Custom furniture design</li>
+                        <li>Door and window repairs</li>
+                        <li>Cabinet installation</li>
+                        <li>Wooden flooring</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Painting</h3>
+                    <p>We offer professional painting services for:</p>
+                    <ul>
+                        <li>Interior walls</li>
+                        <li>Exterior walls</li>
+                        <li>Wall textures and designs</li>
+                        <li>Waterproofing</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Tiling</h3>
+                    <p>Our tiling services include:</p>
+                    <ul>
+                        <li>Floor tiling</li>
+                        <li>Wall tiling</li>
+                        <li>Mosaic designs</li>
+                        <li>Tile repair and replacement</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Plumbing Work">
+                    <p>Plumbing Installation</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Carpentry Work">
+                    <p>Custom Carpentry</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Painting Work">
+                    <p>Wall Painting</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://via.placeholder.com/300x200" alt="Tiling Work">
+                    <p>Floor Tiling</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We are a trusted provider of building maintenance and renovation services, serving commercial and residential clients for over 10 years. Our team of experts ensures quality work and customer satisfaction.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@yourdomain.com</p>
+            <p>Phone: +123 456 7890</p>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <input type="text" id="phone" placeholder="Your Phone Number" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Building Services. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript to handle form submission to Google Sheets
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbySEPOdD4mmj6azhsQLXysyByg8KyPgBmnH7iKuq4HQ-_8SBtthCH7gRAe0qWdklgeD/exec'; // Replace with your Google Script URL
+        const form = document.getElementById('contact-form');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert('Thank you! Your message has been sent.'))
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+</body>
+</html>
